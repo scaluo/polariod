@@ -35,6 +35,7 @@
 			     var rotDegrees = randomXToY(0, 30); 
 		     }
 
+			  
 		  	 ele.css({'width':o.polarwidth+'px','height':o.polarheight+'px','background':'#ffffff','border':'1px solid #787878',
 				      'position':'absolute','left':o.polarwidth/3+Math.random()*(pwidth-o.polarwidth*2),'top':o.polarwidth/3+Math.random()*(pheight-2*o.polarwidth),
                       '-webkit-transform' : 'rotate('+ rotDegrees +'deg)', 
@@ -42,6 +43,12 @@
 				      '-o-transform' : 'rotate('+ rotDegrees +'deg)', 
 			          'tranform' : 'rotate('+ rotDegrees +'deg)'
 			         });
+			 if (o.polarbackgroundimage!="")
+			 {
+				var  bgimage = {"background-image":"url("+o.polarbackgroundimage+")"};
+				ele.css(bgimage);
+			 }	
+			 
 			  var marginleft = (o.polarwidth-o.imagewidth)/2;
 
 			  ele.find("img").css({'width':o.imagewidth+'px','height':o.imageheight+'px','margin':'25px 0 0 '+marginleft+'px'});
